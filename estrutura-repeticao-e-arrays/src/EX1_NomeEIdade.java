@@ -8,19 +8,19 @@ import java.util.Scanner;
 public class EX1_NomeEIdade {
     public static void main(String[] args) throws Exception {
 
-        Scanner sc = new Scanner(System.in);
-
-        String nome = "nada";
-        int idade;
-            
-            while (true) {
-              
-                System.out.println("Digite um nome: ");
-                nome = sc.next();
-                if (nome.equals("0"))
-                    break;
-                System.out.println("Digite sua idade: ");
-                idade = sc.nextInt();
-            }
+        try (Scanner sc = new Scanner(System.in)) {
+            String nome = "nada";
+            int idade;
+                
+                while (true) {
+                  
+                    System.out.println("Digite um nome: ");
+                    nome = sc.next();
+                    if (nome.equals("0"))
+                        break;
+                    System.out.println("Digite sua idade: ");
+                    idade = sc.nextInt();
+                }
+        }
         }
 }
